@@ -7,9 +7,17 @@
   
     .logo-container {
       height: 100%;
-      width: 70px;
+      width: 500px;
       padding: 25px;
+      font-size: 30px;
+
+        &:hover {
+          text-decoration: none;
+        }
+
     }
+
+
   
     .options {
       width: 50%;
