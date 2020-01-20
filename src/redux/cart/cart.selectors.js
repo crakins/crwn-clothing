@@ -16,6 +16,11 @@ export const selectCartsItems = createSelector(
     (cart) => cart.cartItems
 );
 
+export const selectCartHidden = createSelector(
+    [selectCart],
+    (cart) => cart.hidden
+);
+
 // example of a selector for the cart item count in MapToProps in Cart-icon component
 
 export const selectCartItemsCount = createSelector(
