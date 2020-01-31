@@ -4,9 +4,10 @@ import './collection-preview.styles.scss';
 
 // functional component
 
-const CollectionPreview = ({ title, items }) => (
+const CollectionPreview = ({ title, items, routeName, history, match }) => (
     <div className='collection-preview'>
-        <h1 className='title'>{title.toUpperCase()}</h1>
+        <h1 className='title'>
+            <a href={`/${routeName}`}>{title.toUpperCase()}</a> </h1>
         <div className='preview'>
             {
                 items
