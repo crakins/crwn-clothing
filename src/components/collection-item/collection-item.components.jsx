@@ -7,11 +7,12 @@ import { addItem } from '../../redux/cart/cart.actions';
 import './collection-item.styles.scss';
 
 const CollectionItem = ({ item, addItem }) => {
-    const { name, price, imageUrl } = item;
+    const { name, price, imageUrl, id } = item;
     return(
         <div className='collection-item'>
             <div
                 className='image'
+                onClick={() => alert(id)}
                 style={{
                     backgroundImage: `url(${imageUrl})`
                 }}

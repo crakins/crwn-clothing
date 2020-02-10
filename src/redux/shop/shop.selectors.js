@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect';
 
 const selectShop = state => state.shop;
+const selectItems = state => state.items;
 
 export const selectCollections = createSelector(
     [selectShop],
@@ -17,3 +18,8 @@ export const selectCollection = collectionUrlParam =>
         [selectCollections],
         collections => collections[collectionUrlParam]
     );
+
+export const selectItemId = itemUrlParam => createSelector(
+  [selectItems],
+  items =>  items[itemUrlParam]
+);
